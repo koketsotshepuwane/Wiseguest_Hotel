@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Wise Guest</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+	
+	<style>
+        /* Fade-in animation for hero content */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fadeIn {
+            animation: fadeIn 1s ease-out forwards;
+        }
+        /* Ensure text is readable on bright images */
+        .drop-shadow-lg {
+            text-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+        }
+        /* Smooth hover effect for buttons */
+        .hover\:scale-105:hover {
+            transform: scale(1.05);
+        }
+    </style>
+	
+</head>
+<body class="font-sans bg-gray-100">
+    <!-- Header -->
+    <header class="bg-white shadow">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-blue-600">Wise Guest</div>
+            <ul class="flex space-x-6">
+                <li><a href="homePage.html" class="text-gray-700 hover:text-blue-600">Home</a></li>
+                <li><a href="rooms.html" class="text-gray-700 hover:text-blue-600">Rooms</a></li>
+                <li><a href="dining.html" class="text-gray-700 hover:text-blue-600">Dining</a></li>
+                <li><a href="contact.html" class="text-gray-700 hover:text-blue-600">Contact</a></li>
+            </ul>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"><li><a href="booking.html">Book Now</a></li></button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+   <section class="relative bg-cover bg-center h-96 overflow-hidden">
+   <img src="images/top4.jpg" alt="Luxury hotel exterior" class="absolute inset-0 w-full h-full object-cover">
+		<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+		<div class="container mx-auto px-4 h-full flex items-center justify-center">
+			<div class="text-center text-white animate-fadeIn">
+				<h1 class="text-5xl md:text-6xl font-extrabold mb-4 tracking-tight drop-shadow-lg">Contact Us</h1>
+				<p class="text-xl md:text-2xl mb-6 font-light"">We're here to help with any questions or reservations</p>
+				
+			</div>
+		</div>
+    </section>
+
+    <!-- Contact Information Section -->
+    <section class="container mx-auto px-4 py-12">
+        <div class="grid md:grid-cols-2 gap-12">
+            <!-- Contact Form -->
+            <div class="bg-white rounded-lg shadow-md p-8">
+                <h2 class="text-2xl font-bold mb-6">Send Us a Message</h2>
+                <form id="contactForm">
+                    <div class="mb-4">
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Name *</label>
+                        <input type="text" id="name" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+                        <input type="email" id="email" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    <div class="mb-4">
+                        <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
+                        <input type="text" id="subject" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    <div class="mb-4">
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message *</label>
+                        <textarea id="message" rows="4" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-600 text-white px-4 py-3 rounded-lg hover:bg-blue-700">Send Message</button>
+                </form>
+            </div>
+
+            <!-- Contact Details -->
+            <div>
+                <h2 class="text-2xl font-bold mb-6">Contact Information</h2>
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-2">Address</h3>
+                        <p class="text-gray-600">123 Luxury Street<br>City Center, State 12345<br>Pretoria</p>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-2">Phone</h3>
+                        <p class="text-gray-600">Reservations: +27 123 954 881<br>General: +27 825 991 121</p>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-2">Email</h3>
+                        <p class="text-gray-600">info@wiseguest.com<br>reservations@wiseguest.com</p>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-2">Hours</h3>
+                        <p class="text-gray-600">Front Desk: 24/7<br>Concierge: 8 AM - 10 PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="container mx-auto px-4 pb-12">
+        <h2 class="text-2xl font-bold text-center mb-6">Find Us</h2>
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <iframe 
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.241264425974!2d-73.986260684589!3d40.758676979326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes+Square%2C+New+York%2C+NY!5e0!3m2!1sen!2sus!4v1566513967114!5m2!1sen!2sus"
+                width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+            </iframe>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Wise Guest. All rights reserved.</p>
+            <div class="mt-4">
+                <a href="privacypolicy.html" class="text-gray-400 hover:text-white mx-2">Privacy Policy</a>
+                <a href="termsofservice.html" class="text-gray-400 hover:text-white mx-2">Terms of Service</a>
+                <a href="contact.html" class="text-gray-400 hover:text-white mx-2">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            if (this.checkValidity()) {
+                alert('Thank you for your message! We will get back to you soon.');
+                this.reset();
+            } else {
+                this.reportValidity();
+            }
+        });
+    </script>
+</body>
+</html>

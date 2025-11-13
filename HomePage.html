@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wise Guest - Luxury Hotel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+	
+	 <style>
+        /* Fade-in animation for hero content */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fadeIn {
+            animation: fadeIn 1s ease-out forwards;
+        }
+        /* Ensure text is readable on bright images */
+        .drop-shadow-lg {
+            text-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+        }
+        /* Smooth hover effect for buttons */
+        .hover\:scale-105:hover {
+            transform: scale(1.05);
+        }
+		/* Marquee animation */
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .marquee-content {
+            animation: marquee 30s linear infinite;
+        }
+        .marquee:hover .marquee-content {
+            animation-play-state: paused;
+        }
+
+    </style>
+	
+</head>
+<body class="font-sans bg-gray-100">
+    <!-- Header -->
+    <header class="bg-white shadow">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-blue-600">Wise Guest</div>
+            <ul class="flex space-x-6">
+                <li><a href="homePage.html" class="text-gray-700 hover:text-blue-600">Home</a></li>
+                <li><a href="rooms.html" class="text-gray-700 hover:text-blue-600">Rooms</a></li>
+                <li><a href="dining.html" class="text-gray-700 hover:text-blue-600">Dining</a></li>
+                <li><a href="contact.html" class="text-gray-700 hover:text-blue-600">Contact</a></li>
+            </ul>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"><li><a href="booking.html">Book Now</a></li></button>
+			 <!-- Mobile menu button -->
+                <button id="mobile-menu-button" class="md:hidden p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m4 6H4"></path>
+                    </svg>
+                </button>
+        </nav>
+		<!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="homePage.html" class="block py-2 px-4 text-sm hover:bg-gray-200">Home</a>
+            <a href="rooms.html" class="block py-2 px-4 text-sm hover:bg-gray-200">Rooms</a>
+            <a href="dining.html" class="block py-2 px-4 text-sm hover:bg-gray-200">Dining</a>
+            <a href="contact.html" class="block py-2 px-4 text-sm hover:bg-gray-200">Contact</a>
+            <a href="booking.html" class="block py-2 px-4 text-sm sm:hidden hover:bg-gray-200">Book Now</a>
+        </div>
+    </header>
+	
+	<!-- Hero Section -->
+	<section class="relative bg-cover bg-center h-96 overflow-hidden">
+		<img src="images/top4.jpg" alt="Luxury hotel exterior" class="absolute inset-0 w-full h-full object-cover">
+		<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+		<div class="container mx-auto px-4 h-full flex items-center justify-center">
+			<div class="text-center text-white animate-fadeIn">
+				<h1 class="text-5xl md:text-6xl font-extrabold mb-4 tracking-tight drop-shadow-lg">Welcome to Wise Guest</h1>
+				<p class="text-xl md:text-2xl mb-6 font-light"">Experience Unparalleled Luxury in the Heart of the City</p>
+				
+			</div>
+		</div>
+	</section>
+
+    <!-- About Section -->
+    <section class="container mx-auto px-4 py-12">
+        <div class="text-center">
+            <h2 class="text-3xl font-bold mb-4">About Wise Guest</h2>
+            <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+                Nestled in the vibrant heart of the city, Wise Guest is more than just a hotel—it's a destination. We are dedicated to curating an atmosphere of sophisticated luxury and warm, intuitive hospitality. From our elegantly appointed rooms to our world-class amenities, every detail is thoughtfully designed to create a memorable and enriching experience for our guests. Whether you are traveling for business or seeking a tranquil escape, discover a sanctuary of comfort and style at Wise Guest, where every stay is a story waiting to be told.
+            </p>
+        </div>
+    </section>
+	
+	<!-- Amenities Section -->
+    <section class="bg-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-8">Our Amenities</h2>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
+                <div class="flex flex-col items-center">
+                    <svg class="w-12 h-12 text-blue-600 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <h3 class="font-semibold">Free Wi-Fi</h3>
+                </div>
+                <div class="flex flex-col items-center">
+                    <svg class="w-12 h-12 text-blue-600 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    <h3 class="font-semibold">24/7 Room Service</h3>
+                </div>
+                <div class="flex flex-col items-center">
+                    <svg class="w-12 h-12 text-blue-600 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <h3 class="font-semibold">Fine Dining</h3>
+                </div>
+                <div class="flex flex-col items-center">
+                    <svg class="w-12 h-12 text-blue-600 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    <h3 class="font-semibold">Spa & Wellness</h3>
+                </div>
+                <div class="flex flex-col items-center">
+                    <svg class="w-12 h-12 text-blue-600 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                    <h3 class="font-semibold">Swimming Pool</h3>
+                </div>
+                <div class="flex flex-col items-center">
+                    <svg class="w-12 h-12 text-blue-600 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    <h3 class="font-semibold">Fitness Center</h3>
+                </div>
+                <div class="flex flex-col items-center">
+                    <svg class="w-12 h-12 text-blue-600 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h6m-3 4v4m-3-4h6"></path></svg>
+                    <h3 class="font-semibold">Business Center</h3>
+                </div>
+                <div class="flex flex-col items-center">
+                    <svg class="w-12 h-12 text-blue-600 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    <h3 class="font-semibold">Concierge Service</h3>
+                </div>
+                <div class="flex flex-col items-center">
+                    <svg class="w-12 h-12 text-blue-600 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    <h3 class="font-semibold">Valet Parking</h3>
+                </div>
+                <div class="flex flex-col items-center">
+                    <svg class="w-12 h-12 text-blue-600 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+                    <h3 class="font-semibold">Airport Shuttle</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+	
+	<!-- Featured Rooms Section -->
+    <section class="container mx-auto px-4 py-12">
+        <h2 class="text-3xl font-bold text-center mb-8">Featured Rooms</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="images/room1.jpg" alt="Standard Room" class="w-full h-48 object-cover">
+                <div class="p-6 text-center">
+                    <h3 class="text-xl font-bold mb-2">Standard Room</h3>
+                    <p class="text-gray-600 mb-4">Comfortable and cozy, perfect for solo travelers or couples.</p>
+                    <a href="rooms.html" class="text-blue-600 hover:underline font-semibold">View Details</a>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="images/room2.jpg" alt="Deluxe Room" class="w-full h-48 object-cover">
+                <div class="p-6 text-center">
+                    <h3 class="text-xl font-bold mb-2">Deluxe Room</h3>
+                    <p class="text-gray-600 mb-4">Spacious with premium amenities for a luxurious stay.</p>
+                    <a href="rooms.html" class="text-blue-600 hover:underline font-semibold">View Details</a>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="images/room3.jpg" alt="Premium Suite" class="w-full h-48 object-cover">
+                <div class="p-6 text-center">
+                    <h3 class="text-xl font-bold mb-2">Premium Suite</h3>
+                    <p class="text-gray-600 mb-4">The ultimate luxury with a separate living area and top-tier features.</p>
+                    <a href="rooms.html" class="text-blue-600 hover:underline font-semibold">View Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+	
+	    <!-- Client Reviews Section -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">What Our Guests Say</h2>
+            <div class="relative overflow-hidden marquee">
+                <div class="flex w-[200%] marquee-content">
+                    <!-- Review 1 -->
+                    <div class="w-1/4 p-4">
+                        <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                            <p class="text-gray-600 mb-4">"An absolutely unforgettable experience. The service was impeccable and the views were breathtaking. Highly recommended!"</p>
+                            <p class="font-bold text-gray-800">- Koketso Selamola</p>
+                        </div>
+                    </div>
+                    <!-- Review 2 -->
+                    <div class="w-1/4 p-4">
+                        <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                            <p class="text-gray-600 mb-4">"The attention to detail at Wise Guest is second to none. From the welcome drink to the nightly turndown service, everything was perfect."</p>
+                            <p class="font-bold text-gray-800">- Mpho Sibiya</p>
+                        </div>
+                    </div>
+                    <!-- Review 3 -->
+                    <div class="w-1/4 p-4">
+                        <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                            <p class="text-gray-600 mb-4">"A true oasis in the city. The rooms are spacious and luxurious, and the dining options are superb. I can't wait to come back."</p>
+                            <p class="font-bold text-gray-800">- Shantell Makula</p>
+                        </div>
+                    </div>
+                    <!-- Review 4 -->
+                    <div class="w-1/4 p-4">
+                        <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                            <p class="text-gray-600 mb-4">"We had our wedding at Wise Guest and it was a dream come true. The staff went above and beyond to make our day special."</p>
+                            <p class="font-bold text-gray-800">- Emily & David Johnston's family</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+	<!-- Dining Highlight Section -->
+    <section class="bg-gray-800 text-white">
+        <div class="container mx-auto px-4 py-12 grid md:grid-cols-2 gap-8 items-center">
+            <div class="text-center md:text-left">
+                <h2 class="text-3xl font-bold mb-4">Exquisite Dining</h2>
+                <p class="text-lg text-gray-300 mb-6">From fine dining at The Grand Bistro to casual cocktails at the Rooftop Terrace, our culinary experiences are designed to delight every palate.</p>
+                <a href="dining.html" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 font-semibold transition duration-300">Explore Dining</a>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <img src="images/bistro.jpg" alt="The Grand Bistro" class="rounded-lg shadow-lg w-full h-full object-cover">
+                <img src="images/Rooftop Terrace.jpg" alt="Rooftop Terrace" class="rounded-lg shadow-lg w-full h-full object-cover">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Wise Guest. All rights reserved.</p>
+            <div class="mt-4">
+                <a href="privacypolicy.html" class="text-gray-400 hover:text-white mx-2">Privacy Policy</a>
+                <a href="termsofservice.html" class="text-gray-400 hover:text-white mx-2">Terms of Service</a>
+                <a href="contact.html" class="text-gray-400 hover:text-white mx-2">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+	
+	<!-- <span class="bookingBtn">Booking</span> Modal -->
+		<div id="bookingModal" class="modal">
+		  <div class="modal-content">
+			<span class="close">&times;</span>
+			<h2>Book Your Trip</h2>
+			<form id="bookingForm">
+			  <label>Full Name:</label><input type="text" name="name" required>
+			  <label>Email:</label><input type="email" name="email" required>
+			  <label>Phone Number:</label><input type="tel" name="phone" required>
+			  <label>Travel Date:</label><input type="date" name="date" required>
+			  <label>Destination:</label><input type="text" name="destination" required>
+			  <label>Message:</label><textarea name="message"></textarea>
+			  <button type="submit">Submit <span class="bookingBtn">Booking</span></button>
+			</form>
+			<div id="bookingSuccess" style="display:none;color:green;margin-top:10px;">✅ <span class="bookingBtn">Booking</span> confirmed! We'll contact you shortly.</div>
+		  </div>
+		</div>
+
+		<style>
+		.modal { display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; overflow:auto; background-color: rgba(0,0,0,0.5); }
+		.modal-content { background-color:#fff; margin:10% auto; padding:20px; border-radius:8px; max-width:400px; width:90%; }
+		.close { float:right; font-size:28px; font-weight:bold; cursor:pointer; }
+		.modal-content input, .modal-content textarea { width:100%; padding:8px; margin:5px 0; }
+		.modal-content button { padding:10px 20px; background:#007bff; color:#fff; border:none; border-radius:4px; cursor:pointer; }
+		.modal-content button:hover { background:#0056b3; }
+		@media (max-width:768px) { .modal-content { margin:20% auto; } }
+		</style>
+		<script>
+		document.addEventListener("DOMContentLoaded", function(){
+		  var modal = document.getElementById("bookingModal");
+		  var btns = document.querySelectorAll(".bookingBtn");
+		  var span = document.querySelectorAll(".close")[0];
+		  btns.forEach(function(btn){ btn.onclick = function(){ modal.style.display = "block"; } });
+		  span.onclick = function(){ modal.style.display = "none"; }
+		  window.onclick = function(event){ if(event.target==modal){ modal.style.display="none"; } }
+		  var form = document.getElementById("bookingForm");
+		  form.onsubmit = function(e){
+			e.preventDefault();
+			document.getElementById("bookingSuccess").style.display="block";
+			form.reset();
+		  };
+
+		  document.getElementById('mobile-menu-button').addEventListener('click', function() {
+			var menu = document.getElementById('mobile-menu');
+			menu.classList.toggle('hidden');
+		  });
+		});
+</script>
+</body>
+</html>

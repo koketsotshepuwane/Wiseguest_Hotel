@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dining - Wise Guest</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+	
+	<style>
+        /* Fade-in animation for hero content */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fadeIn {
+            animation: fadeIn 1s ease-out forwards;
+        }
+        /* Ensure text is readable on bright images */
+        .drop-shadow-lg {
+            text-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+        }
+        /* Smooth hover effect for buttons */
+        .hover\:scale-105:hover {
+            transform: scale(1.05);
+        }
+    </style>
+	
+</head>
+<body class="font-sans bg-gray-100">
+    <!-- Header -->
+    <header class="bg-white shadow">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-blue-600">Wise Guest</div>
+            <ul class="flex space-x-6">
+                <li><a href="homePage.html" class="text-gray-700 hover:text-blue-600">Home</a></li>
+                <li><a href="rooms.html" class="text-gray-700 hover:text-blue-600">Rooms</a></li>
+                <li><a href="dining.html" class="text-gray-700 hover:text-blue-600">Dining</a></li>
+                <li><a href="contact.html" class="text-gray-700 hover:text-blue-600">Contact</a></li>
+            </ul>
+           <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"><li><a href="booking.html">Book Now</a></li></button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-cover bg-center h-96 overflow-hidden">
+	<img src="images/top4.jpg" alt="Luxury hotel exterior" class="absolute inset-0 w-full h-full object-cover">
+		<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+		<div class="container mx-auto px-4 h-full flex items-center justify-center">
+			<div class="text-center text-white animate-fadeIn">
+				<h1 class="text-5xl md:text-6xl font-extrabold mb-4 tracking-tight drop-shadow-lg">Dining at Wise Guest</h1>
+				<p class="text-xl md:text-2xl mb-6 font-light"">Savor exquisite flavors and culinary delights</p>
+				
+			</div>
+		</div>
+    </section>
+
+    <!-- Dining Options Section -->
+    <section class="container mx-auto px-4 py-12">
+        <h2 class="text-3xl font-bold text-center mb-12">Our Dining Experiences</h2>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Restaurant 1 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="images/bistro.jpg" alt="Fine Dining" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">The Grand Bistro</h3>
+                    <p class="text-gray-600 mb-4">Experience fine dining with international cuisine prepared by our award-winning chefs.</p>
+                    <ul class="text-sm text-gray-700 mb-4 space-y-2">
+                        <li class="flex items-center"><span class="mr-2">✓</span> Open for breakfast, lunch, and dinner</li>
+                        <li class="flex items-center"><span class="mr-2">✓</span> Extensive wine list</li>
+                        <li class="flex items-center"><span class="mr-2">✓</span> Vegetarian and vegan options</li>
+                    </ul>
+                    <a href="thegrandbistrom1.html" class="text-blue-600 hover:underline">View Menu</a>
+                </div>
+            </div>
+
+            <!-- Restaurant 2 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="images/Café Lounge.JPG" alt="Cafe" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Café Lounge</h3>
+                    <p class="text-gray-600 mb-4">Relax with light bites, specialty coffees, and cocktails in a casual atmosphere.</p>
+                    <ul class="text-sm text-gray-700 mb-4 space-y-2">
+                        <li class="flex items-center"><span class="mr-2">✓</span> Open 24/7</li>
+                        <li class="flex items-center"><span class="mr-2">✓</span> Fresh pastries and sandwiches</li>
+                        <li class="flex items-center"><span class="mr-2">✓</span> Happy hour specials</li>
+                    </ul>
+                    <a href="caféloungem2.html" class="text-blue-600 hover:underline">View Menu</a>
+                </div>
+            </div>
+
+            <!-- Restaurant 3 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden md:col-span-2 mx-auto max-w-2xl">
+                <img src="images/Rooftop Terrace.jpg" alt="Rooftop Dining" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Rooftop Terrace</h3>
+                    <p class="text-gray-600 mb-4">Enjoy al fresco dining with panoramic city views and seasonal specialties.</p>
+                    <ul class="text-sm text-gray-700 mb-4 space-y-2">
+                        <li class="flex items-center"><span class="mr-2">✓</span> Open evenings (weather permitting)</li>
+                        <li class="flex items-center"><span class="mr-2">✓</span> Grill and barbecue options</li>
+                        <li class="flex items-center"><span class="mr-2">✓</span> Live music on weekends</li>
+                    </ul>
+                    <a href="rooftopterracem3.html" class="text-blue-600 hover:underline">View Menu</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Wise Guest. All rights reserved.</p>
+            <div class="mt-4">
+                <a href="privacypolicy.html" class="text-gray-400 hover:text-white mx-2">Privacy Policy</a>
+                <a href="termsofservice.html" class="text-gray-400 hover:text-white mx-2">Terms of Service</a>
+                <a href="contact.html" class="text-gray-400 hover:text-white mx-2">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
